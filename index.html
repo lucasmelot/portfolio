@@ -1,324 +1,326 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfólio de Lucas Melo — Engenheiro de Software, Desenvolvedor de Sistemas Corporativos e fundador da LM Studio." />
-  <meta name="theme-color" content="#aaa8ab" />
-  <meta property="og:title" content="Lucas Melo — Engenheiro de Software" />
-  <meta property="og:description" content="Projetos, experiência e trabalho de Lucas Melo em engenharia de software, sistemas corporativos e desenvolvimento web." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f5f4ef" />
+  <meta name="description" content="LM Studio cria páginas web com direção visual, clareza e foco em conversão — com especial atenção a negócios de estética e beleza." />
+  <meta property="og:title" content="LM Studio — Páginas web que transformam atenção em ação" />
+  <meta property="og:description" content="Design e desenvolvimento de páginas web com foco em percepção, clareza e conversão." />
   <meta property="og:type" content="website" />
-  <title>Lucas Melo — Engenheiro de Software</title>
+  <meta property="og:locale" content="pt_BR" />
+  <title>LM Studio — Web Design & Desenvolvimento</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/lm-logo.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="page-noise" aria-hidden="true"></div>
-  <div class="cursor-glow" aria-hidden="true"></div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="Ir para o início">
-      <span class="brand-mark">LM</span>
-      <span class="brand-dot"></span>
+  <header class="site-header" data-header>
+    <a class="brand" href="#inicio" aria-label="LM Studio — início">
+      <img src="assets/lm-logo.png" alt="LM Studio" />
+      <span>LM Studio</span>
     </a>
 
     <nav class="desktop-nav" aria-label="Navegação principal">
-      <a href="#sobre">Sobre</a>
-      <a href="#experiencia">Experiência</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#stack">Stack</a>
+      <a href="#trabalho">Trabalho</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Processo</a>
+      <a href="#faq">FAQ</a>
     </nav>
 
-    <a class="header-cta" href="#contato">Contato <span>↗</span></a>
+    <a class="header-cta" href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
+      Falar sobre um projeto
+      <span aria-hidden="true">↗</span>
+    </a>
 
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu" data-menu-button>
       <span></span><span></span>
     </button>
+
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+      <a href="#trabalho">Trabalho</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Processo</a>
+      <a href="#faq">FAQ</a>
+      <a class="mobile-menu-cta" href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">Falar sobre um projeto ↗</a>
+    </div>
   </header>
 
-  <div class="mobile-menu" aria-hidden="true">
-    <a href="#sobre">Sobre</a>
-    <a href="#experiencia">Experiência</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#stack">Stack</a>
-    <a href="#contato">Contato</a>
-  </div>
-
-  <main>
-    <section class="hero section-shell">
+  <main id="conteudo">
+    <section class="hero section-shell" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-kicker reveal">DESIGN + DESENVOLVIMENTO WEB</div>
       <div class="hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="status-dot"></span> Engenharia de Software · Sistemas Corporativos</p>
-          <h1>
-            EU CONSTRUO<br />
-            <span class="outline-word">SISTEMAS.</span><br />
-            E ELEVO<br />
-            <span class="accent-word">EXPERIÊNCIAS.</span>
+        <div class="hero-copy">
+          <h1 id="hero-title" class="reveal reveal-delay-1">
+            Sua página não precisa só parecer <em>boa.</em>
+            <span>Ela precisa fazer alguém agir.</span>
           </h1>
-          <p class="hero-text">
-            Lucas Melo — Engenheiro de Software e Desenvolvedor de Sistemas Corporativos. Fundador da LM Studio.
+          <p class="hero-intro reveal reveal-delay-2">
+            A LM Studio cria páginas web com direção visual, clareza e intenção — para transformar uma primeira impressão em confiança, interesse e contato.
           </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projetos">Ver projetos <span>↘</span></a>
-            <a class="btn btn-ghost" href="https://www.linkedin.com/in/lucas-melo-631289264/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+          <div class="hero-actions reveal reveal-delay-3">
+            <a class="primary-button" href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
+              Quero uma página para meu negócio
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="text-link" href="#trabalho">Ver como eu penso o projeto ↓</a>
           </div>
         </div>
 
-        <div class="hero-visual reveal delay-1" aria-hidden="true">
-          <div class="hero-ring ring-1"></div>
-          <div class="hero-ring ring-2"></div>
-          <div class="hero-slash slash-1"></div>
-          <div class="hero-slash slash-2"></div>
-
-          <div class="terminal-card">
-            <div class="terminal-top">
-              <span>lucas@portfolio</span>
-              <span>profile</span>
-            </div>
-            <div class="terminal-body">
-              <p><span class="prompt">$</span> perfil --profissional</p>
-              <p class="terminal-result">Engenheiro de Software</p>
-              <p class="terminal-result">Desenvolvedor de Sistemas Corporativos</p>
-              <p class="terminal-result">Fundador · LM Studio</p>
-              <p><span class="prompt">$</span> foco --entrega</p>
-              <p class="terminal-result cyan">Sistemas · Web · UX · Integrações</p>
-              <span class="terminal-cursor"></span>
-            </div>
-          </div>
-
-          <div class="visual-index">01 / PORTFOLIO</div>
-        </div>
+        <aside class="hero-proof reveal reveal-delay-2" aria-label="Proposta da LM Studio">
+          <div class="proof-number">01</div>
+          <p>Visual forte sem sacrificar clareza.</p>
+          <div class="proof-line"></div>
+          <div class="proof-number">02</div>
+          <p>Estrutura pensada para conduzir a decisão.</p>
+          <div class="proof-line"></div>
+          <div class="proof-number">03</div>
+          <p>Desenvolvimento responsivo, rápido e direto ao ponto.</p>
+        </aside>
       </div>
 
-      <div class="hero-footer reveal delay-2">
-        <div class="scroll-cue"><span></span> role para explorar</div>
-        <p>Software com propósito, interface com intenção.</p>
+      <div class="hero-statement reveal">
+        <span class="cyan-rule" aria-hidden="true"></span>
+        <p>Hoje, meu repertório está especialmente concentrado em <strong>estética e beleza</strong> — um mercado em que percepção, confiança e apresentação influenciam a decisão antes mesmo do primeiro atendimento.</p>
       </div>
     </section>
 
-    <section class="statement section-shell" id="sobre">
-      <div class="section-label reveal">01 — SOBRE</div>
-      <div class="statement-grid">
-        <div class="statement-title reveal">
-          <h2>TECNOLOGIA<br />COM DIREÇÃO.</h2>
-        </div>
-        <div class="statement-copy reveal delay-1">
-          <p class="lead">Construo soluções que conectam necessidade de negócio, engenharia e experiência de uso.</p>
-          <p>
-            Sou Engenheiro de Software e Desenvolvedor de Sistemas Corporativos. Meu trabalho parte do problema real: entender a necessidade, estruturar a solução e transformar isso em uma experiência clara, funcional e sustentável.
-          </p>
-          <p>
-            Também sou fundador da LM Studio, onde atuo como Desenvolvedor Web criando experiências digitais para negócios que precisam comunicar melhor seu valor e apresentar uma presença online profissional.
-          </p>
-          <a class="text-link" href="https://github.com/lucasmelot" target="_blank" rel="noreferrer">Ver GitHub <span>↗</span></a>
-        </div>
-      </div>
-
-      <div class="principles-grid">
-        <article class="principle reveal">
-          <span>01</span>
-          <h3>Problema antes da ferramenta.</h3>
-          <p>A tecnologia entra para resolver. Não para complicar uma necessidade simples.</p>
-        </article>
-        <article class="principle reveal delay-1">
-          <span>02</span>
-          <h3>Produto antes do efeito.</h3>
-          <p>Estética importa, mas clareza, confiança e resultado precisam vir primeiro.</p>
-        </article>
-        <article class="principle reveal delay-2">
-          <span>03</span>
-          <h3>Execução com intenção.</h3>
-          <p>Cada decisão de interface e código precisa ter um motivo para existir.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="experience section-shell" id="experiencia">
-      <div class="section-label reveal">02 — EXPERIÊNCIA</div>
-      <div class="experience-layout">
-        <div class="experience-heading reveal">
-          <p class="micro-label">ATUAÇÃO PROFISSIONAL</p>
-          <h2>SOFTWARE<br />QUE ATUA<br /><span>NO REAL.</span></h2>
-        </div>
-
-        <div class="timeline reveal delay-1">
-          <article class="timeline-item active">
-            <div class="timeline-meta">
-              <span>LM Studio</span>
-              <span>Empresa</span>
-            </div>
-            <div class="timeline-content">
-              <h3>Fundador · Desenvolvedor Web</h3>
-              <p>Criação de sites e experiências digitais com foco em posicionamento, interface, responsividade e conversão para negócios.</p>
-              <div class="tag-row">
-                <span>Web</span><span>UI/UX</span><span>Frontend</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-meta">
-              <span>Brasilata</span>
-              <span>Tecnologia</span>
-            </div>
-            <div class="timeline-content">
-              <h3>Desenvolvedor de Sistemas Corporativos</h3>
-              <p>Desenvolvimento e evolução de sistemas voltados a necessidades internas, integração de dados, automação de processos e suporte à operação.</p>
-              <div class="tag-row">
-                <span>Sistemas Corporativos</span><span>Integrações</span><span>Automação</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects section-shell" id="projetos">
-      <div class="projects-header reveal">
+    <section class="problem-section" aria-labelledby="problem-title">
+      <div class="section-shell problem-grid">
         <div>
-          <div class="section-label">03 — PROJETOS</div>
-          <h2>TRABALHO<br /><span>SELECIONADO.</span></h2>
+          <p class="section-index">01 / O PROBLEMA</p>
+          <h2 id="problem-title">Bonito chama atenção. <em>Clareza converte.</em></h2>
         </div>
-        <p>Três projetos que representam a direção visual e o padrão de experiência que estou construindo.</p>
+        <div class="problem-copy">
+          <p class="lead">Quando alguém entra no seu site, ela tenta responder três perguntas em poucos segundos:</p>
+          <ol class="decision-list">
+            <li><span>01</span><strong>Isso é para mim?</strong></li>
+            <li><span>02</span><strong>Posso confiar nessa marca?</strong></li>
+            <li><span>03</span><strong>Qual é o próximo passo?</strong></li>
+          </ol>
+          <p>Meu trabalho é transformar essas respostas em uma experiência visual que faça sentido para a sua marca — sem depender de um template genérico para parecer profissional.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section section-shell" id="trabalho" aria-labelledby="work-title">
+      <div class="section-heading">
+        <p class="section-index">02 / DIREÇÕES DE PROJETO</p>
+        <h2 id="work-title">Experiências digitais pensadas para negócios que vendem <em>percepção.</em></h2>
+        <p>Estas composições mostram a direção de interface que a LM Studio desenvolve para o nicho de estética. Não são apresentados como cases de clientes ou resultados fabricados.</p>
       </div>
 
-      <div class="projects-list">
-        <article class="project-card featured reveal" data-project="minimah">
-          <div class="project-number">01</div>
-          <div class="project-preview preview-minimah" aria-hidden="true">
-            <div class="minimah-browser">
-              <div class="minimah-nav"><span>MINIMAH</span><i></i><i></i></div>
-              <div class="minimah-hero">
-                <div>
-                  <small>JOIAS ESSENCIAIS</small>
-                  <strong>Elegância<br />sem excesso.</strong>
-                  <span class="mini-cta">VER COLEÇÃO</span>
+      <div class="work-list">
+        <article class="work-card work-card-a">
+          <div class="work-meta">
+            <span>01</span>
+            <div>
+              <h3>Clínica de estética</h3>
+              <p>Institucional + conversão</p>
+            </div>
+          </div>
+          <div class="work-visual clinic-ui" aria-label="Demonstração visual de uma página para clínica de estética">
+            <div class="mini-browser">
+              <div class="mini-topbar"><span></span><span></span><span></span></div>
+              <div class="clinic-layout">
+                <div class="clinic-type">
+                  <small>PELE • CUIDADO • CONFIANÇA</small>
+                  <strong>Beleza que começa com intenção.</strong>
+                  <div class="mini-cta">Conhecer tratamentos</div>
                 </div>
-                <div class="minimah-jewel"><b></b></div>
+                <div class="clinic-portrait"><span>01</span></div>
               </div>
             </div>
           </div>
-          <div class="project-info">
-            <div class="project-topline"><span>JOIAS · WEBSITE</span><span>HTML · CSS · JS</span></div>
-            <h3>Minimah Joias</h3>
-            <p>Experiência digital minimalista para uma marca de joias, com direção visual limpa, hierarquia forte, responsividade e foco em valor percebido.</p>
-            <div class="project-actions">
-              <a href="https://minimahjoias.github.io/" target="_blank" rel="noreferrer">Abrir projeto <span>↗</span></a>
-            </div>
-          </div>
+          <div class="work-note">Hierarquia elegante + foco em confiança + CTA evidente.</div>
         </article>
 
-        <article class="project-card reveal" data-project="barbearia">
-          <div class="project-number">02</div>
-          <div class="project-preview preview-barber" aria-hidden="true">
-            <div class="barber-browser">
-              <div class="barber-top"><span>BARBEARIA</span><b>PREMIUM</b></div>
-              <div class="barber-copy">
-                <small>ESTILO · PRECISÃO · EXPERIÊNCIA</small>
-                <strong>Seu estilo.<br />Elevado.</strong>
-                <div class="barber-button">AGENDAR HORÁRIO</div>
+        <article class="work-card work-card-b">
+          <div class="work-meta">
+            <span>02</span>
+            <div>
+              <h3>Brow & Lash</h3>
+              <p>Landing page de captação</p>
+            </div>
+          </div>
+          <div class="work-visual brow-ui" aria-label="Demonstração visual de uma landing page para brow e lash">
+            <div class="brow-frame">
+              <div class="brow-nav">studio / appointments</div>
+              <div class="brow-copy">
+                <span>DESIGN QUE DESTACA O QUE JÁ É SEU</span>
+                <strong>Olhar.<br />Presença.<br /><em>Detalhe.</em></strong>
               </div>
-              <div class="barber-mark">B</div>
+              <div class="brow-dot" aria-hidden="true"></div>
             </div>
           </div>
-          <div class="project-info">
-            <div class="project-topline"><span>BARBEARIA · WEBSITE</span><span>HTML · CSS · JS</span></div>
-            <h3>Barbearia Premium</h3>
-            <p>Site institucional com estética masculina premium, foco em serviços, confiança, agendamento e uma experiência responsiva orientada à conversão.</p>
-            <div class="project-actions">
-              <a href="https://lucasmelot.github.io/" target="_blank" rel="noreferrer">Abrir projeto <span>↗</span></a>
-            </div>
-          </div>
+          <div class="work-note">Mensagem curta + assinatura visual + caminho direto para agendamento.</div>
         </article>
 
-        <article class="project-card reveal" data-project="lumea">
-          <div class="project-number">03</div>
-          <div class="project-preview preview-lumea" aria-hidden="true">
-            <div class="lumea-frame">
-              <div class="lumea-kicker">ESTÉTICA FACIAL</div>
-              <strong>LUMÉA</strong>
-              <p>beleza com naturalidade</p>
-              <div class="lumea-pill"></div>
+        <article class="work-card work-card-c">
+          <div class="work-meta">
+            <span>03</span>
+            <div>
+              <h3>Procedimentos premium</h3>
+              <p>Página de campanha</p>
             </div>
           </div>
-          <div class="project-info">
-            <div class="project-topline"><span>ESTÉTICA · LANDING PAGE</span><span>HTML · CSS · JS</span></div>
-            <h3>LUMÉA — Estética Facial</h3>
-            <p>Landing page com linguagem visual sofisticada, conteúdo orientado à confiança, responsividade e CTAs pensados para transformar interesse em contato.</p>
-            <div class="project-actions">
-              <a href="https://lucasmelot.github.io/esteticapremium/" target="_blank" rel="noreferrer">Abrir projeto <span>↗</span></a>
+          <div class="work-visual premium-ui" aria-label="Demonstração visual de uma página de campanha para procedimentos premium">
+            <div class="premium-panel">
+              <div class="premium-left">
+                <span class="big-index">03</span>
+                <small>PROTOCOLO / EXPERIÊNCIA / RESULTADO</small>
+              </div>
+              <div class="premium-right">
+                <strong>Uma página que vende antes da conversa.</strong>
+                <p>Explica o valor, reduz dúvida e conduz para a ação.</p>
+                <div class="thin-button">Solicitar avaliação ↗</div>
+              </div>
             </div>
           </div>
+          <div class="work-note">Argumento de valor + redução de objeções + chamada para ação.</div>
         </article>
       </div>
     </section>
 
-    <section class="stack section-shell" id="stack">
-      <div class="stack-head reveal">
-        <div class="section-label">04 — STACK</div>
-        <h2>FERRAMENTAS<br />QUE EU <span>USO.</span></h2>
+    <section class="services-section" id="servicos" aria-labelledby="services-title">
+      <div class="section-shell">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="section-index">03 / O QUE EU DESENVOLVO</p>
+            <h2 id="services-title">Uma página com <em>função</em>, não só presença.</h2>
+          </div>
+          <p>O escopo é definido a partir do que a página precisa fazer: apresentar, captar, lançar, explicar ou gerar contato.</p>
+        </div>
+
+        <div class="services-table" role="list">
+          <div class="service-row" role="listitem">
+            <span class="service-no">01</span>
+            <h3>Landing pages</h3>
+            <p>Para campanhas, procedimentos, serviços específicos ou uma oferta que precisa de foco.</p>
+            <span class="service-arrow" aria-hidden="true">↗</span>
+          </div>
+          <div class="service-row" role="listitem">
+            <span class="service-no">02</span>
+            <h3>Sites institucionais</h3>
+            <p>Para organizar a marca, construir confiança e deixar claro o que você faz.</p>
+            <span class="service-arrow" aria-hidden="true">↗</span>
+          </div>
+          <div class="service-row" role="listitem">
+            <span class="service-no">03</span>
+            <h3>Páginas de campanha</h3>
+            <p>Para ações sazonais, lançamentos, captação ou uma experiência mais editorial.</p>
+            <span class="service-arrow" aria-hidden="true">↗</span>
+          </div>
+        </div>
+
+        <div class="niche-note">
+          <span>FOCO ATUAL</span>
+          <p>Estética e beleza são hoje o principal território visual do portfólio, mas a LM Studio também desenvolve páginas para outros negócios quando o projeto pede a mesma atenção à percepção e à conversão.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section section-shell" id="processo" aria-labelledby="process-title">
+      <div class="section-heading">
+        <p class="section-index">04 / PROCESSO</p>
+        <h2 id="process-title">Menos “faz um site bonito”.<br /><em>Mais decisões com motivo.</em></h2>
       </div>
 
-      <div class="stack-grid">
-        <article class="stack-group reveal">
-          <span class="stack-index">01</span>
-          <h3>Frontend</h3>
-          <div class="stack-items">
-            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>React Router</span>
-          </div>
+      <div class="process-grid">
+        <article>
+          <span>01</span>
+          <h3>Diagnóstico</h3>
+          <p>Entendo oferta, público, objeções e a ação que a página precisa gerar.</p>
         </article>
-        <article class="stack-group reveal delay-1">
-          <span class="stack-index">02</span>
-          <h3>Dados & integração</h3>
-          <div class="stack-items">
-            <span>APIs REST</span><span>Axios</span><span>Supabase</span><span>PostgreSQL</span><span>SheetJS</span><span>LocalStorage</span>
-          </div>
+        <article>
+          <span>02</span>
+          <h3>Direção</h3>
+          <p>Defino hierarquia, linguagem visual e estrutura antes de virar código.</p>
         </article>
-        <article class="stack-group reveal delay-2">
-          <span class="stack-index">03</span>
-          <h3>Workflow</h3>
-          <div class="stack-items">
-            <span>Git</span><span>GitHub</span><span>GitHub Pages</span><span>RLS</span><span>Responsive UI</span>
-          </div>
+        <article>
+          <span>03</span>
+          <h3>Construção</h3>
+          <p>Desenvolvo a interface responsiva, com atenção a velocidade, legibilidade e interação.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Refino</h3>
+          <p>Reviso detalhes, responsividade e pontos de atrito antes da publicação.</p>
         </article>
       </div>
     </section>
 
-    <section class="manifesto section-shell">
-      <div class="manifesto-line reveal">
-        <span>ENTENDER.</span><span class="accent">CONSTRUIR.</span><span>TESTAR.</span><span class="outline">REFINAR.</span>
-      </div>
-      <div class="manifesto-meta reveal delay-1">
-        <p>Software bom não começa no código.</p>
-        <p>Começa entendendo o que precisa ser resolvido.</p>
+    <section class="contrast-section" aria-labelledby="contrast-title">
+      <div class="section-shell contrast-grid">
+        <p class="section-index">05 / POSICIONAMENTO</p>
+        <h2 id="contrast-title">Eu não quero que seu visitante diga “site bonito”.</h2>
+        <p class="contrast-answer">Quero que ele entenda <em>por que escolher você.</em></p>
       </div>
     </section>
 
-    <section class="contact section-shell" id="contato">
-      <div class="contact-inner reveal">
-        <div class="section-label">05 — CONTATO</div>
-        <p class="contact-kicker">Tem um problema real para resolver?</p>
-        <h2>VAMOS<br /><span>CONSTRUIR.</span></h2>
-        <div class="contact-links">
-          <a href="https://www.linkedin.com/in/lucas-melo-631289264/" target="_blank" rel="noreferrer">
-            <span>LinkedIn</span><b>↗</b>
-          </a>
-          <a href="https://github.com/lucasmelot" target="_blank" rel="noreferrer">
-            <span>GitHub</span><b>↗</b>
+    <section class="faq-section section-shell" id="faq" aria-labelledby="faq-title">
+      <div class="section-heading split-heading faq-heading">
+        <div>
+          <p class="section-index">06 / FAQ</p>
+          <h2 id="faq-title">Antes de <em>conversarmos.</em></h2>
+        </div>
+        <p>Sem preço tabelado porque o escopo muda conforme a função, o tamanho e a complexidade da página.</p>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>Você trabalha apenas com estética?<span aria-hidden="true">+</span></summary>
+          <p>Não. Estética e beleza são meu foco atual de portfólio porque esse mercado exige muito de apresentação, confiança e percepção. Projetos de outros segmentos também podem fazer sentido.</p>
+        </details>
+        <details>
+          <summary>Você faz só o design ou também desenvolve?<span aria-hidden="true">+</span></summary>
+          <p>A proposta da LM Studio une direção de interface e desenvolvimento da página. O formato técnico é definido conforme o projeto.</p>
+        </details>
+        <details>
+          <summary>Eu preciso chegar com tudo pronto?<span aria-hidden="true">+</span></summary>
+          <p>Não. Materiais da marca ajudam, mas a estrutura da página e a organização da mensagem fazem parte do trabalho. Conteúdos específicos, fotos e informações do negócio são alinhados no briefing.</p>
+        </details>
+        <details>
+          <summary>Como começamos?<span aria-hidden="true">+</span></summary>
+          <p>Você me conta o que vende, para quem vende e o que espera que a página gere. A partir disso, definimos o escopo certo antes de começar.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="section-shell cta-grid">
+        <div>
+          <span class="section-index light-index">07 / PRÓXIMO PASSO</span>
+          <h2 id="cta-title">Sua marca já está sendo julgada antes do primeiro “oi”.</h2>
+        </div>
+        <div class="cta-side">
+          <p>Vamos fazer essa primeira impressão trabalhar a seu favor.</p>
+          <a class="cta-link" href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
+            Quero conversar sobre minha página
+            <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer section-shell">
-    <p>© Lucas Melo</p>
-    <p>Engenheiro de Software · Sistemas Corporativos</p>
-    <a href="#top">Voltar ao topo ↑</a>
+  <footer class="site-footer">
+    <div class="section-shell footer-grid">
+      <a class="footer-brand" href="#inicio">
+        <img src="assets/lm-logo.png" alt="" aria-hidden="true" />
+        <span>LM Studio</span>
+      </a>
+      <p>Design e desenvolvimento de páginas web.</p>
+      <a href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <p class="copyright">© <span data-year></span> LM Studio</p>
+    </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
