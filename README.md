@@ -1,4 +1,4 @@
-# LM Studio — site institucional v2.1
+# LM Studio — site institucional v2.2
 
 Site estático reconstruído do zero para funcionar como portfólio comercial e landing page institucional da LM Studio.
 
@@ -55,3 +55,18 @@ Antes de publicar em domínio próprio, recomenda-se adicionar:
 2. `og:image` absoluto para compartilhamento social.
 3. Canal de contato direto definitivo.
 4. Analytics apenas se houver uma decisão clara sobre privacidade e medição.
+
+## Portfólio / projetos v2.2
+
+A seção de projetos foi reconstruída como uma sequência de mini-cases, não como uma galeria de thumbnails. Cada case tem:
+
+- status real do trabalho (publicado ou demonstrativo);
+- contexto do negócio;
+- uma tese curta sobre o problema de comunicação;
+- uma leitura do projeto explicando a lógica da experiência;
+- três decisões objetivas de design/produto;
+- link para a experiência navegável.
+
+O layout é escalável: para adicionar um novo projeto, duplique um `<article class="project-case">` dentro de `.project-cases`. Em desktop, os cases alternam automaticamente imagem/texto via `:nth-child(even)`; no mobile todos empilham imagem primeiro e conteúdo depois. Nenhuma regra adicional de CSS é necessária para o 4º, 5º ou 6º projeto.
+
+As capturas continuam sendo servidas pelo Thum.io, mas agora incluem dimensões explícitas (`width`/`height`), `loading="lazy"`, `decoding="async"` e prioridade baixa para reduzir CLS e evitar competição com o conteúdo acima da dobra. O parâmetro `noanimate` foi removido porque podia congelar páginas que iniciam elementos em estado de animação, gerando previews incompletas.
