@@ -3,320 +3,356 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f5f4ef" />
-  <meta name="description" content="LM Studio cria páginas web com direção visual, clareza e foco em conversão — com especial atenção a negócios de estética e beleza." />
-  <meta property="og:title" content="LM Studio — Páginas web que transformam atenção em ação" />
-  <meta property="og:description" content="Design e desenvolvimento de páginas web com foco em percepção, clareza e conversão." />
+  <meta name="theme-color" content="#f9faf9" />
+  <meta name="color-scheme" content="light" />
+
+  <title>LM Studio — Sites e soluções web para comunicar valor</title>
+  <meta name="description" content="A LM Studio desenvolve sites e soluções web para negócios que querem comunicar valor, gerar confiança e transformar visitas em contatos e agendamentos." />
+  <meta property="og:title" content="LM Studio — Sites e soluções web" />
+  <meta property="og:description" content="Presença digital com clareza, percepção de valor e foco no próximo passo do cliente." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
-  <title>LM Studio — Web Design & Desenvolvimento</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/lm-logo.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="page-progress" aria-hidden="true"><span data-progress></span></div>
 
-  <header class="site-header" data-header>
-    <a class="brand" href="#inicio" aria-label="LM Studio — início">
-      <img src="assets/lm-logo.png" alt="LM Studio" />
-      <span>LM Studio</span>
-    </a>
+  <header class="header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="#inicio" aria-label="LM Studio — início">
+        <span class="brand-mark" aria-hidden="true"><img src="assets/lm-logo.png" alt="" /></span>
+        <span class="brand-name">LM Studio</span>
+      </a>
 
-    <nav class="desktop-nav" aria-label="Navegação principal">
-      <a href="#trabalho">Trabalho</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#processo">Processo</a>
-      <a href="#faq">FAQ</a>
-    </nav>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#projetos">Projetos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#processo">Processo</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
 
-    <a class="header-cta" href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
-      Falar sobre um projeto
-      <span aria-hidden="true">↗</span>
-    </a>
+      <a class="header-cta" href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
+        Apresentar meu negócio <span aria-hidden="true">↗</span>
+      </a>
 
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu" data-menu-button>
-      <span></span><span></span>
-    </button>
+      <button class="menu-trigger" type="button" aria-controls="menu-mobile" aria-expanded="false" data-menu-trigger>
+        <span class="sr-only">Abrir menu</span>
+        <span></span><span></span>
+      </button>
+    </div>
 
-    <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
-      <a href="#trabalho">Trabalho</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#processo">Processo</a>
-      <a href="#faq">FAQ</a>
-      <a class="mobile-menu-cta" href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">Falar sobre um projeto ↗</a>
+    <div class="mobile-menu" id="menu-mobile" data-mobile-menu hidden>
+      <nav aria-label="Navegação mobile">
+        <a href="#projetos">Projetos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#processo">Processo</a>
+        <a href="#sobre">Sobre</a>
+        <a class="mobile-cta" href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">Apresentar meu negócio ↗</a>
+      </nav>
     </div>
   </header>
 
   <main id="conteudo">
-    <section class="hero section-shell" id="inicio" aria-labelledby="hero-title">
-      <div class="hero-kicker reveal">DESIGN + DESENVOLVIMENTO WEB</div>
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <h1 id="hero-title" class="reveal reveal-delay-1">
-            Sua página não precisa só parecer <em>boa.</em>
-            <span>Ela precisa fazer alguém agir.</span>
-          </h1>
-          <p class="hero-intro reveal reveal-delay-2">
-            A LM Studio cria páginas web com direção visual, clareza e intenção — para transformar uma primeira impressão em confiança, interesse e contato.
-          </p>
-          <div class="hero-actions reveal reveal-delay-3">
-            <a class="primary-button" href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
-              Quero uma página para meu negócio
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a class="text-link" href="#trabalho">Ver como eu penso o projeto ↓</a>
-          </div>
-        </div>
-
-        <aside class="hero-proof reveal reveal-delay-2" aria-label="Proposta da LM Studio">
-          <div class="proof-number">01</div>
-          <p>Visual forte sem sacrificar clareza.</p>
-          <div class="proof-line"></div>
-          <div class="proof-number">02</div>
-          <p>Estrutura pensada para conduzir a decisão.</p>
-          <div class="proof-line"></div>
-          <div class="proof-number">03</div>
-          <p>Desenvolvimento responsivo, rápido e direto ao ponto.</p>
-        </aside>
+    <section class="hero shell" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-top reveal">
+        <p class="eyebrow">DESENVOLVIMENTO DIGITAL · SITES & SOLUÇÕES WEB</p>
+        <p class="hero-note">Clareza para quem chega.<br />Valor para quem decide.</p>
       </div>
 
-      <div class="hero-statement reveal">
-        <span class="cyan-rule" aria-hidden="true"></span>
-        <p>Hoje, meu repertório está especialmente concentrado em <strong>estética e beleza</strong> — um mercado em que percepção, confiança e apresentação influenciam a decisão antes mesmo do primeiro atendimento.</p>
+      <div class="hero-main">
+        <h1 id="hero-title" class="reveal reveal-1">
+          Seu negócio já tem valor.<br />
+          <span>O site precisa deixar isso <em>claro.</em></span>
+        </h1>
+
+        <div class="hero-lower reveal reveal-2">
+          <div class="connector-line" aria-hidden="true"><span></span></div>
+          <div class="hero-copy">
+            <p>A LM Studio cria experiências digitais para transformar interesse em confiança — e confiança em contato, orçamento ou agendamento.</p>
+            <div class="hero-actions">
+              <a class="button button-dark" href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
+                Quero melhorar minha presença digital <span aria-hidden="true">↗</span>
+              </a>
+              <a class="text-link" href="#projetos">Ver projetos publicados <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-principles reveal reveal-3" aria-label="Princípios da LM Studio">
+        <span>01 · Percepção de valor</span>
+        <span>02 · Clareza da oferta</span>
+        <span>03 · Próximo passo sem atrito</span>
       </div>
     </section>
 
-    <section class="problem-section" aria-labelledby="problem-title">
-      <div class="section-shell problem-grid">
-        <div>
-          <p class="section-index">01 / O PROBLEMA</p>
-          <h2 id="problem-title">Bonito chama atenção. <em>Clareza converte.</em></h2>
-        </div>
-        <div class="problem-copy">
-          <p class="lead">Quando alguém entra no seu site, ela tenta responder três perguntas em poucos segundos:</p>
-          <ol class="decision-list">
-            <li><span>01</span><strong>Isso é para mim?</strong></li>
-            <li><span>02</span><strong>Posso confiar nessa marca?</strong></li>
-            <li><span>03</span><strong>Qual é o próximo passo?</strong></li>
-          </ol>
-          <p>Meu trabalho é transformar essas respostas em uma experiência visual que faça sentido para a sua marca — sem depender de um template genérico para parecer profissional.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="work-section section-shell" id="trabalho" aria-labelledby="work-title">
-      <div class="section-heading">
-        <p class="section-index">02 / DIREÇÕES DE PROJETO</p>
-        <h2 id="work-title">Experiências digitais pensadas para negócios que vendem <em>percepção.</em></h2>
-        <p>Estas composições mostram a direção de interface que a LM Studio desenvolve para o nicho de estética. Não são apresentados como cases de clientes ou resultados fabricados.</p>
-      </div>
-
-      <div class="work-list">
-        <article class="work-card work-card-a">
-          <div class="work-meta">
-            <span>01</span>
-            <div>
-              <h3>Clínica de estética</h3>
-              <p>Institucional + conversão</p>
-            </div>
-          </div>
-          <div class="work-visual clinic-ui" aria-label="Demonstração visual de uma página para clínica de estética">
-            <div class="mini-browser">
-              <div class="mini-topbar"><span></span><span></span><span></span></div>
-              <div class="clinic-layout">
-                <div class="clinic-type">
-                  <small>PELE • CUIDADO • CONFIANÇA</small>
-                  <strong>Beleza que começa com intenção.</strong>
-                  <div class="mini-cta">Conhecer tratamentos</div>
-                </div>
-                <div class="clinic-portrait"><span>01</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="work-note">Hierarquia elegante + foco em confiança + CTA evidente.</div>
-        </article>
-
-        <article class="work-card work-card-b">
-          <div class="work-meta">
-            <span>02</span>
-            <div>
-              <h3>Brow & Lash</h3>
-              <p>Landing page de captação</p>
-            </div>
-          </div>
-          <div class="work-visual brow-ui" aria-label="Demonstração visual de uma landing page para brow e lash">
-            <div class="brow-frame">
-              <div class="brow-nav">studio / appointments</div>
-              <div class="brow-copy">
-                <span>DESIGN QUE DESTACA O QUE JÁ É SEU</span>
-                <strong>Olhar.<br />Presença.<br /><em>Detalhe.</em></strong>
-              </div>
-              <div class="brow-dot" aria-hidden="true"></div>
-            </div>
-          </div>
-          <div class="work-note">Mensagem curta + assinatura visual + caminho direto para agendamento.</div>
-        </article>
-
-        <article class="work-card work-card-c">
-          <div class="work-meta">
-            <span>03</span>
-            <div>
-              <h3>Procedimentos premium</h3>
-              <p>Página de campanha</p>
-            </div>
-          </div>
-          <div class="work-visual premium-ui" aria-label="Demonstração visual de uma página de campanha para procedimentos premium">
-            <div class="premium-panel">
-              <div class="premium-left">
-                <span class="big-index">03</span>
-                <small>PROTOCOLO / EXPERIÊNCIA / RESULTADO</small>
-              </div>
-              <div class="premium-right">
-                <strong>Uma página que vende antes da conversa.</strong>
-                <p>Explica o valor, reduz dúvida e conduz para a ação.</p>
-                <div class="thin-button">Solicitar avaliação ↗</div>
-              </div>
-            </div>
-          </div>
-          <div class="work-note">Argumento de valor + redução de objeções + chamada para ação.</div>
-        </article>
-      </div>
-    </section>
-
-    <section class="services-section" id="servicos" aria-labelledby="services-title">
-      <div class="section-shell">
-        <div class="section-heading split-heading">
-          <div>
-            <p class="section-index">03 / O QUE EU DESENVOLVO</p>
-            <h2 id="services-title">Uma página com <em>função</em>, não só presença.</h2>
-          </div>
-          <p>O escopo é definido a partir do que a página precisa fazer: apresentar, captar, lançar, explicar ou gerar contato.</p>
-        </div>
-
-        <div class="services-table" role="list">
-          <div class="service-row" role="listitem">
-            <span class="service-no">01</span>
-            <h3>Landing pages</h3>
-            <p>Para campanhas, procedimentos, serviços específicos ou uma oferta que precisa de foco.</p>
-            <span class="service-arrow" aria-hidden="true">↗</span>
-          </div>
-          <div class="service-row" role="listitem">
-            <span class="service-no">02</span>
-            <h3>Sites institucionais</h3>
-            <p>Para organizar a marca, construir confiança e deixar claro o que você faz.</p>
-            <span class="service-arrow" aria-hidden="true">↗</span>
-          </div>
-          <div class="service-row" role="listitem">
-            <span class="service-no">03</span>
-            <h3>Páginas de campanha</h3>
-            <p>Para ações sazonais, lançamentos, captação ou uma experiência mais editorial.</p>
-            <span class="service-arrow" aria-hidden="true">↗</span>
-          </div>
-        </div>
-
-        <div class="niche-note">
-          <span>FOCO ATUAL</span>
-          <p>Estética e beleza são hoje o principal território visual do portfólio, mas a LM Studio também desenvolve páginas para outros negócios quando o projeto pede a mesma atenção à percepção e à conversão.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="process-section section-shell" id="processo" aria-labelledby="process-title">
-      <div class="section-heading">
-        <p class="section-index">04 / PROCESSO</p>
-        <h2 id="process-title">Menos “faz um site bonito”.<br /><em>Mais decisões com motivo.</em></h2>
-      </div>
-
-      <div class="process-grid">
-        <article>
+    <section class="friction" aria-labelledby="friction-title">
+      <div class="shell friction-grid">
+        <div class="section-label reveal">
           <span>01</span>
-          <h3>Diagnóstico</h3>
-          <p>Entendo oferta, público, objeções e a ação que a página precisa gerar.</p>
-        </article>
-        <article>
+          <p>O ponto de partida</p>
+        </div>
+
+        <div class="friction-main">
+          <h2 id="friction-title" class="reveal reveal-1">Um bom negócio pode parecer comum quando sua presença digital não acompanha a qualidade real do que você entrega.</h2>
+          <p class="friction-intro reveal reveal-2">Quando isso acontece, a venda começa em desvantagem antes mesmo da conversa.</p>
+
+          <div class="friction-list reveal reveal-3">
+            <article>
+              <span>01</span>
+              <h3>Parece menos profissional.</h3>
+              <p>O visitante forma uma impressão antes de conhecer seu atendimento, produto ou serviço.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>A oferta fica difícil de entender.</h3>
+              <p>Informação sem hierarquia obriga o cliente a descobrir sozinho por que deveria escolher você.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>O interesse não vira ação.</h3>
+              <p>Instagram e Google podem trazer atenção; a jornada precisa deixar claro o que fazer em seguida.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects shell" id="projetos" aria-labelledby="projects-title">
+      <div class="projects-head">
+        <div class="section-label reveal">
           <span>02</span>
-          <h3>Direção</h3>
-          <p>Defino hierarquia, linguagem visual e estrutura antes de virar código.</p>
+          <p>Projetos publicados</p>
+        </div>
+        <div>
+          <h2 id="projects-title" class="display-title reveal reveal-1">O trabalho precisa falar antes da explicação.</h2>
+          <p class="section-intro reveal reveal-2">Experiências que podem ser abertas e navegadas. Os projetos demonstrativos estão identificados como tal — sem clientes, métricas ou resultados inventados.</p>
+        </div>
+      </div>
+
+      <div class="project-list">
+        <article class="project project-featured reveal">
+          <div class="project-visual" data-project="MINIMAH">
+            <a href="https://minimahjoias.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Abrir o site da MINIMAH em nova guia">
+              <img
+                src="https://image.thum.io/get/width/1600/crop/1000/maxAge/48/noanimate/https://minimahjoias.github.io/"
+                alt="Captura da página inicial da MINIMAH, projeto publicado"
+                loading="lazy"
+                decoding="async"
+                onerror="this.style.display='none'"
+              />
+              <span class="project-open" aria-hidden="true">Abrir site ↗</span>
+            </a>
+          </div>
+          <div class="project-info">
+            <div class="project-index">01</div>
+            <div>
+              <p class="project-type">SEMIJOIAS & ACESSÓRIOS · PROJETO PUBLICADO</p>
+              <h3>MINIMAH</h3>
+              <p>Uma experiência editorial que organiza descoberta, curadoria de peças e atendimento, conduzindo o interesse até o contato pelo WhatsApp.</p>
+              <a class="text-link" href="https://minimahjoias.github.io/" target="_blank" rel="noopener noreferrer">Visitar projeto <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
         </article>
-        <article>
+
+        <div class="project-pair">
+          <article class="project reveal">
+            <div class="project-visual" data-project="AVELAR">
+              <a href="https://lucasmelot.github.io/barbeariapremium/" target="_blank" rel="noopener noreferrer" aria-label="Abrir o projeto Avelar em nova guia">
+                <img
+                  src="https://image.thum.io/get/width/1200/crop/900/maxAge/48/noanimate/https://lucasmelot.github.io/barbeariapremium/"
+                  alt="Captura da página inicial do projeto demonstrativo Avelar Barbearia"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.style.display='none'"
+                />
+                <span class="project-open" aria-hidden="true">Abrir site ↗</span>
+              </a>
+            </div>
+            <div class="project-info compact">
+              <div class="project-index">02</div>
+              <div>
+                <p class="project-type">BARBEARIA & ESTILO · PROJETO DEMONSTRATIVO</p>
+                <h3>Avelar</h3>
+                <p>Marca, serviços e uma jornada de agendamento simulada em uma interface com presença e foco.</p>
+                <a class="text-link" href="https://lucasmelot.github.io/barbeariapremium/" target="_blank" rel="noopener noreferrer">Visitar projeto <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal reveal-1">
+            <div class="project-visual" data-project="LUMÉA">
+              <a href="https://lucasmelot.github.io/esteticapremium/" target="_blank" rel="noopener noreferrer" aria-label="Abrir o projeto LUMÉA em nova guia">
+                <img
+                  src="https://image.thum.io/get/width/1200/crop/900/maxAge/48/noanimate/https://lucasmelot.github.io/esteticapremium/"
+                  alt="Captura da página inicial do projeto demonstrativo LUMÉA Estética Facial"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.style.display='none'"
+                />
+                <span class="project-open" aria-hidden="true">Abrir site ↗</span>
+              </a>
+            </div>
+            <div class="project-info compact">
+              <div class="project-index">03</div>
+              <div>
+                <p class="project-type">ESTÉTICA FACIAL · PROJETO DEMONSTRATIVO</p>
+                <h3>LUMÉA</h3>
+                <p>Serviços, abordagem e avaliação organizados em uma experiência premium, responsiva e orientada à ação.</p>
+                <a class="text-link" href="https://lucasmelot.github.io/esteticapremium/" target="_blank" rel="noopener noreferrer">Visitar projeto <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="value" id="servicos" aria-labelledby="value-title">
+      <div class="shell value-grid">
+        <div class="section-label light reveal">
           <span>03</span>
-          <h3>Construção</h3>
-          <p>Desenvolvo a interface responsiva, com atenção a velocidade, legibilidade e interação.</p>
-        </article>
-        <article>
+          <p>O que a LM Studio vende</p>
+        </div>
+
+        <div>
+          <div class="value-heading reveal reveal-1">
+            <h2 id="value-title">O site é o meio.<br /><em>O produto real é a jornada.</em></h2>
+            <p>Design e desenvolvimento são usados para apresentar melhor o valor do negócio, reduzir dúvidas e facilitar o próximo passo do cliente.</p>
+          </div>
+
+          <div class="service-list reveal reveal-2">
+            <article>
+              <span>01</span>
+              <h3>Landing pages</h3>
+              <p>Uma oferta, uma mensagem e uma ação principal — para serviços, campanhas ou captação.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Sites institucionais</h3>
+              <p>Empresa, serviços, diferenciais e contato organizados para construir confiança antes da conversa.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Experiências de conversão</h3>
+              <p>Fluxos para WhatsApp, formulários, orçamento e agendamento quando isso fizer sentido para a operação.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Soluções web</h3>
+              <p>Funcionalidades leves além da página institucional quando a necessidade do negócio pedir algo a mais.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process shell" id="processo" aria-labelledby="process-title">
+      <div class="process-head">
+        <div class="section-label reveal">
           <span>04</span>
-          <h3>Refino</h3>
-          <p>Reviso detalhes, responsividade e pontos de atrito antes da publicação.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="contrast-section" aria-labelledby="contrast-title">
-      <div class="section-shell contrast-grid">
-        <p class="section-index">05 / POSICIONAMENTO</p>
-        <h2 id="contrast-title">Eu não quero que seu visitante diga “site bonito”.</h2>
-        <p class="contrast-answer">Quero que ele entenda <em>por que escolher você.</em></p>
-      </div>
-    </section>
-
-    <section class="faq-section section-shell" id="faq" aria-labelledby="faq-title">
-      <div class="section-heading split-heading faq-heading">
-        <div>
-          <p class="section-index">06 / FAQ</p>
-          <h2 id="faq-title">Antes de <em>conversarmos.</em></h2>
+          <p>Como funciona</p>
         </div>
-        <p>Sem preço tabelado porque o escopo muda conforme a função, o tamanho e a complexidade da página.</p>
+        <div>
+          <h2 id="process-title" class="display-title reveal reveal-1">Cada decisão precisa ter um motivo.</h2>
+          <p class="section-intro reveal reveal-2">O processo começa no problema comercial e termina com uma experiência publicada, responsiva e coerente com a marca.</p>
+        </div>
       </div>
 
-      <div class="faq-list">
+      <ol class="process-line reveal reveal-2">
+        <li><span>01</span><strong>Diagnóstico</strong><p>Oferta, público, contexto e objetivo da página.</p></li>
+        <li><span>02</span><strong>Estrutura</strong><p>Mensagem, hierarquia e caminho até a ação.</p></li>
+        <li><span>03</span><strong>Desenvolvimento</strong><p>Interface responsiva e implementação.</p></li>
+        <li><span>04</span><strong>Validação</strong><p>Conteúdo, mobile, interação e pontos de atrito.</p></li>
+        <li><span>05</span><strong>Publicação</strong><p>Experiência pronta para receber visitantes.</p></li>
+      </ol>
+    </section>
+
+    <section class="positioning" id="sobre" aria-labelledby="positioning-title">
+      <div class="shell positioning-grid">
+        <div class="section-label reveal">
+          <span>05</span>
+          <p>Princípios</p>
+        </div>
+
+        <div class="positioning-copy">
+          <h2 id="positioning-title" class="reveal reveal-1">A LM Studio não existe para colocar mais uma página bonita na internet.</h2>
+          <p class="positioning-lead reveal reveal-2">Existe para fazer a presença digital de um negócio trabalhar melhor.</p>
+
+          <div class="principle-list reveal reveal-3">
+            <div><span>Valor antes de estética</span><p>O visual precisa elevar percepção e ajudar a decisão, não existir para impressionar sozinho.</p></div>
+            <div><span>Clareza antes de criatividade</span><p>Quem chega precisa entender rapidamente quem você é, o que oferece e o que fazer em seguida.</p></div>
+            <div><span>Conversão sem agressividade</span><p>Chamadas claras, prova real e menos atrito — sem transformar o site em uma página promocional genérica.</p></div>
+            <div><span>Mobile primeiro</span><p>A experiência precisa funcionar especialmente bem no dispositivo em que boa parte da descoberta começa.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq shell" aria-labelledby="faq-title">
+      <div class="faq-head">
+        <div class="section-label reveal">
+          <span>06</span>
+          <p>Perguntas frequentes</p>
+        </div>
+        <h2 id="faq-title" class="display-title reveal reveal-1">Antes de conversar.</h2>
+      </div>
+
+      <div class="faq-list reveal reveal-2">
         <details>
-          <summary>Você trabalha apenas com estética?<span aria-hidden="true">+</span></summary>
-          <p>Não. Estética e beleza são meu foco atual de portfólio porque esse mercado exige muito de apresentação, confiança e percepção. Projetos de outros segmentos também podem fazer sentido.</p>
+          <summary>Vocês trabalham apenas com estética e beleza?<span aria-hidden="true">+</span></summary>
+          <p>Não. O portfólio atual concentra trabalhos de estética, imagem pessoal e varejo, mas a LM Studio atende negócios de serviços e comércio local quando apresentação, confiança e contato têm peso na decisão de compra.</p>
         </details>
         <details>
-          <summary>Você faz só o design ou também desenvolve?<span aria-hidden="true">+</span></summary>
-          <p>A proposta da LM Studio une direção de interface e desenvolvimento da página. O formato técnico é definido conforme o projeto.</p>
+          <summary>A LM Studio faz só o design?<span aria-hidden="true">+</span></summary>
+          <p>Não. A proposta une direção da experiência e desenvolvimento da página. O formato técnico depende da necessidade real do projeto.</p>
         </details>
         <details>
-          <summary>Eu preciso chegar com tudo pronto?<span aria-hidden="true">+</span></summary>
-          <p>Não. Materiais da marca ajudam, mas a estrutura da página e a organização da mensagem fazem parte do trabalho. Conteúdos específicos, fotos e informações do negócio são alinhados no briefing.</p>
+          <summary>Preciso ter todo o conteúdo pronto?<span aria-hidden="true">+</span></summary>
+          <p>Não. Materiais reais do negócio são essenciais, mas estrutura, hierarquia e organização da mensagem fazem parte do trabalho.</p>
         </details>
         <details>
-          <summary>Como começamos?<span aria-hidden="true">+</span></summary>
-          <p>Você me conta o que vende, para quem vende e o que espera que a página gere. A partir disso, definimos o escopo certo antes de começar.</p>
+          <summary>Por que não há preços no site?<span aria-hidden="true">+</span></summary>
+          <p>Porque o escopo muda conforme a função, o tamanho e a complexidade da solução. A proposta nasce do objetivo da página, não de um pacote genérico.</p>
+        </details>
+        <details>
+          <summary>Como começa um projeto?<span aria-hidden="true">+</span></summary>
+          <p>Você apresenta o negócio, o que vende e o que espera que a presença digital gere. A partir daí, o escopo é definido antes de começar o desenvolvimento.</p>
         </details>
       </div>
     </section>
 
-    <section class="final-cta" aria-labelledby="cta-title">
-      <div class="section-shell cta-grid">
-        <div>
-          <span class="section-index light-index">07 / PRÓXIMO PASSO</span>
-          <h2 id="cta-title">Sua marca já está sendo julgada antes do primeiro “oi”.</h2>
-        </div>
-        <div class="cta-side">
-          <p>Vamos fazer essa primeira impressão trabalhar a seu favor.</p>
-          <a class="cta-link" href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
-            Quero conversar sobre minha página
-            <span aria-hidden="true">↗</span>
+    <section class="final-cta" aria-labelledby="final-title">
+      <div class="shell final-grid">
+        <p class="final-kicker reveal">SE O DIGITAL AINDA ENTREGA MENOS DO QUE O SEU NEGÓCIO ENTREGA NA PRÁTICA</p>
+        <h2 id="final-title" class="reveal reveal-1">Talvez esteja na hora de aproximar as duas coisas.</h2>
+        <div class="final-action reveal reveal-2">
+          <p>Conte o que sua empresa faz e qual próximo passo você quer facilitar para o cliente. A conversa começa pelo objetivo — não pelo template.</p>
+          <a class="button button-light" href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
+            Apresentar meu negócio <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="section-shell footer-grid">
-      <a class="footer-brand" href="#inicio">
-        <img src="assets/lm-logo.png" alt="" aria-hidden="true" />
-        <span>LM Studio</span>
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <a class="brand footer-brand" href="#inicio" aria-label="Voltar ao início">
+        <span class="brand-mark" aria-hidden="true"><img src="assets/lm-logo.png" alt="" /></span>
+        <span class="brand-name">LM Studio</span>
       </a>
-      <p>Design e desenvolvimento de páginas web.</p>
-      <a href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <p>Sites e soluções web para comunicar valor, gerar confiança e facilitar o próximo passo.</p>
+      <div class="footer-links">
+        <a href="#projetos">Projetos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="https://www.linkedin.com/company/lm-studio-br/home/?viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
       <p class="copyright">© <span data-year></span> LM Studio</p>
     </div>
   </footer>
