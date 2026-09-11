@@ -150,6 +150,7 @@
                   height="1536"
                   loading="eager"
                   decoding="async"
+                  fetchpriority="low"
                 />
                 <div class="minimah-preview__shade"></div>
 
@@ -205,11 +206,13 @@
           <div class="project-case-media" data-project="AVELAR">
             <a href="https://lucasmelot.github.io/barbeariapremium/" target="_blank" rel="noopener noreferrer" aria-label="Abrir o projeto Avelar em nova guia">
               <img
-                src="https://image.thum.io/get/width/1400/crop/900/maxAge/48/https://lucasmelot.github.io/barbeariapremium/"
+                src="assets/projects/avelar-1400.webp"
+                srcset="assets/projects/avelar-640.webp 640w, assets/projects/avelar-960.webp 960w, assets/projects/avelar-1400.webp 1400w"
+                sizes="(max-width: 760px) calc(100vw - 34px), (max-width: 1050px) 50vw, (max-width: 1440px) 55vw, 830px"
                 alt="Captura da página inicial do projeto Avelar Barbearia"
                 width="1400"
                 height="900"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
                 fetchpriority="low"
                 onerror="this.style.display='none'"
@@ -246,11 +249,13 @@
           <div class="project-case-media" data-project="LUMÉA">
             <a href="https://lucasmelot.github.io/esteticapremium/" target="_blank" rel="noopener noreferrer" aria-label="Abrir o projeto LUMÉA em nova guia">
               <img
-                src="https://image.thum.io/get/width/1400/crop/900/maxAge/48/https://lucasmelot.github.io/esteticapremium/"
+                src="assets/projects/lumea-1400.webp"
+                srcset="assets/projects/lumea-640.webp 640w, assets/projects/lumea-960.webp 960w, assets/projects/lumea-1400.webp 1400w"
+                sizes="(max-width: 760px) calc(100vw - 34px), (max-width: 1050px) 50vw, (max-width: 1440px) 55vw, 830px"
                 alt="Captura da página inicial do projeto LUMÉA Estética Facial"
                 width="1400"
                 height="900"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
                 fetchpriority="low"
                 onerror="this.style.display='none'"
@@ -434,6 +439,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

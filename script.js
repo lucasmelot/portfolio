@@ -15,9 +15,21 @@
     if (progress) progress.style.transform = `scaleX(${max > 0 ? Math.min(1, top / max) : 0})`;
   };
 
+  // Agrupa eventos consecutivos em uma atualização por quadro.
+  // Mantém o mesmo progresso e estado do cabeçalho durante a rolagem.
+  let scrollFrame = null;
+  const scheduleScrollUI = () => {
+    if (scrollFrame !== null) return;
+    scrollFrame = window.requestAnimationFrame(() => {
+      scrollFrame = null;
+      updateScrollUI();
+    });
+  };
+
   updateScrollUI();
-  window.addEventListener('scroll', updateScrollUI, { passive: true });
-  window.addEventListener('resize', updateScrollUI, { passive: true });
+  window.addEventListener('scroll', scheduleScrollUI, { passive: true });
+  window.addEventListener('resize', scheduleScrollUI, { passive: true });
+  window.addEventListener('load', scheduleScrollUI, { once: true });
 
   const closeMenu = () => {
     if (!trigger || !menu) return;
