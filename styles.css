@@ -939,3 +939,65 @@ button, a { -webkit-tap-highlight-color: transparent; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* MINIMAH: live project preview.
+   The previous Thum.io image could be captured before the hero finished loading,
+   leaving only the chocolate fallback background visible. The iframe now renders
+   the published project itself, while the local hero is a visual fallback during load. */
+.project-case-media--live {
+  aspect-ratio: 14 / 9;
+  background: #2f1b14 url("assets/projects/minimah-hero.webp") center top / cover no-repeat;
+}
+
+.project-case-media--live::before {
+  display: none;
+}
+
+.project-live-preview {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  background: transparent;
+}
+
+.project-live-preview iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+.project-preview-link {
+  position: absolute !important;
+  inset: 0;
+  z-index: 4;
+  display: block;
+  aspect-ratio: auto !important;
+  overflow: hidden;
+}
+
+.project-preview-link::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: auto 0 0;
+  height: 24%;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(16,21,33,.22), transparent);
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.project-case-media--live:hover .project-preview-link::after,
+.project-case-media--live:focus-within .project-preview-link::after {
+  opacity: 1;
+}
+
+.project-case-media--live:hover .project-open,
+.project-case-media--live:focus-within .project-open {
+  opacity: 1;
+  transform: none;
+}

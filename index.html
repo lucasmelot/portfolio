@@ -139,18 +139,22 @@
       <div class="project-cases" aria-label="Cases da LM Studio">
         <!-- Para adicionar um novo projeto, duplique um .project-case. O layout alterna automaticamente no desktop e empilha no mobile. -->
         <article class="project-case reveal">
-          <div class="project-case-media" data-project="MINIMAH">
-            <a href="https://minimahjoias.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Abrir o site da MINIMAH em nova guia">
-              <img
-                src="https://image.thum.io/get/width/1400/crop/900/maxAge/48/https://minimahjoias.github.io/"
-                alt="Captura da página inicial da MINIMAH"
-                width="1400"
-                height="900"
+          <div class="project-case-media project-case-media--live" data-project="MINIMAH">
+            <div class="project-live-preview" aria-hidden="true">
+              <iframe
+                src="https://minimahjoias.github.io/"
+                title="Prévia ao vivo do projeto MINIMAH"
                 loading="lazy"
-                decoding="async"
-                fetchpriority="low"
-                onerror="this.style.display='none'"
-              />
+                tabindex="-1"
+              ></iframe>
+            </div>
+            <a
+              class="project-preview-link"
+              href="https://minimahjoias.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir o site da MINIMAH em nova guia"
+            >
               <span class="project-open" aria-hidden="true">Ver projeto ↗</span>
             </a>
           </div>
