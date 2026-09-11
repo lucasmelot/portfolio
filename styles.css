@@ -940,64 +940,181 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .reveal { opacity: 1; transform: none; }
 }
 
-/* MINIMAH: live project preview.
-   The previous Thum.io image could be captured before the hero finished loading,
-   leaving only the chocolate fallback background visible. The iframe now renders
-   the published project itself, while the local hero is a visual fallback during load. */
-.project-case-media--live {
-  aspect-ratio: 14 / 9;
-  background: #2f1b14 url("assets/projects/minimah-hero.webp") center top / cover no-repeat;
+/* =========================================================
+   Preview local do case MINIMAH
+   Evita dependência de screenshot externo/iframe e reproduz
+   o hero real do projeto com os próprios assets do site.
+   ========================================================= */
+.project-case-media[data-project="MINIMAH"] {
+  background: #2f1b14;
 }
 
-.project-case-media--live::before {
+.project-case-media[data-project="MINIMAH"]::before {
   display: none;
 }
 
-.project-live-preview {
+.minimah-preview {
   position: absolute;
   inset: 0;
   z-index: 1;
   overflow: hidden;
-  background: transparent;
+  background: #2f1b14;
+  color: #fffdf9;
+  font-family: "DM Sans", system-ui, sans-serif;
 }
 
-.project-live-preview iframe {
-  display: block;
+.minimah-preview__photo {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  border: 0;
-  background: transparent;
-  pointer-events: none;
+  object-fit: cover;
+  object-position: 67% 43%;
+  transform: scale(1.025);
+  transition: transform 700ms cubic-bezier(.2,.7,.2,1), filter 260ms ease;
 }
 
-.project-preview-link {
-  position: absolute !important;
+.minimah-preview__shade {
+  position: absolute;
   inset: 0;
-  z-index: 4;
-  display: block;
-  aspect-ratio: auto !important;
-  overflow: hidden;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(25,13,9,.82) 0%, rgba(25,13,9,.59) 31%, rgba(25,13,9,.14) 61%, rgba(25,13,9,.03) 100%),
+    linear-gradient(0deg, rgba(23,12,8,.42), transparent 48%);
 }
 
-.project-preview-link::after {
-  content: "";
+.minimah-preview__header {
   position: absolute;
   z-index: 2;
-  inset: auto 0 0;
-  height: 24%;
-  pointer-events: none;
-  background: linear-gradient(to top, rgba(16,21,33,.22), transparent);
-  opacity: 0;
-  transition: opacity 220ms ease;
+  top: 5.4%;
+  left: 5.3%;
+  right: 4.2%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
 }
 
-.project-case-media--live:hover .project-preview-link::after,
-.project-case-media--live:focus-within .project-preview-link::after {
-  opacity: 1;
+.minimah-preview__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1;
 }
 
-.project-case-media--live:hover .project-open,
-.project-case-media--live:focus-within .project-open {
-  opacity: 1;
-  transform: none;
+.minimah-preview__brand strong {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(14px, 1.45vw, 23px);
+  font-weight: 500;
+  letter-spacing: .18em;
+}
+
+.minimah-preview__brand span {
+  margin-top: 4px;
+  font-size: clamp(4px, .42vw, 7px);
+  font-weight: 600;
+  letter-spacing: .20em;
+  opacity: .76;
+}
+
+.minimah-preview__nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2.3vw, 38px);
+  padding-top: 4px;
+  font-size: clamp(5px, .58vw, 9px);
+  font-weight: 600;
+  letter-spacing: .09em;
+  opacity: .86;
+}
+
+.minimah-preview__content {
+  position: absolute;
+  z-index: 2;
+  left: 5.3%;
+  bottom: 8.5%;
+  width: min(51%, 510px);
+}
+
+.minimah-preview__eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #d9c4aa;
+  font-size: clamp(5px, .56vw, 9px);
+  font-weight: 600;
+  letter-spacing: .22em;
+}
+
+.minimah-preview__title {
+  display: block;
+  color: #fffdf9;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(30px, 4.75vw, 75px);
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: .82;
+}
+
+.minimah-preview__title em {
+  color: #eee4d8;
+  font-weight: 400;
+}
+
+.minimah-preview__text {
+  display: block;
+  max-width: 36ch;
+  margin-top: clamp(11px, 1.5vw, 24px);
+  color: rgba(255,253,249,.78);
+  font-size: clamp(6px, .68vw, 11px);
+  line-height: 1.65;
+}
+
+.minimah-preview__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  min-height: clamp(25px, 3.4vw, 45px);
+  margin-top: clamp(12px, 1.7vw, 26px);
+  padding: 0 clamp(10px, 1.6vw, 22px);
+  background: #fffdf9;
+  color: #24140f;
+  font-size: clamp(5px, .56vw, 9px);
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+
+.minimah-preview__button b {
+  font-size: 1.15em;
+  font-weight: 500;
+}
+
+.project-case-media[data-project="MINIMAH"] a:hover .minimah-preview__photo {
+  transform: scale(1.04);
+}
+
+@media (max-width: 880px) {
+  .minimah-preview__nav {
+    display: none;
+  }
+
+  .minimah-preview__content {
+    width: 58%;
+  }
+}
+
+@media (max-width: 620px) {
+  .minimah-preview__header {
+    top: 7%;
+    left: 6%;
+  }
+
+  .minimah-preview__content {
+    left: 6%;
+    bottom: 9%;
+    width: 62%;
+  }
+
+  .minimah-preview__text {
+    max-width: 31ch;
+  }
 }
